@@ -34,12 +34,16 @@
   <div class="container-choice">
     <div class="select-box">
       <h3><span><i class="fa-solid fa-gear choice-icon"></i>SELECIONAR MÁQUINA</span></h3>
+      <div class="machines-categories">
+        <button onclick="changeCategory(0)">Pulverizadores</button>
+        <button onclick="changeCategory(1)">Distribuidores</button>
+      </div>
       <div class="machines">
         <h4>
-          <button onclick="changeData(0)">Imperador 2000</button>
-          <button onclick="changeData(1)">Imperador 3000/4000</button>
-          <button onclick="changeData(2)">Hércules 6.0</button>
-          <button onclick="changeData(3)">Hércules 4.0</button>
+          <button onclick="changeMachine(0)" id="machines-imp2000">Imperador 2000</button>
+          <button onclick="changeMachine(1)" id="machines-imp3000">Imperador 3000/4000</button>
+          <button onclick="changeMachine(2)" id="machines-herc60">Hércules 6.0</button>
+          <button onclick="changeMachine(3)" id="machines-herc40">Hércules 4.0</button>
         </h4>
       </div>
     </div>
@@ -78,6 +82,18 @@
 </body>
 
 <script>
+  function clearCategory() {
+    document.getElementById('machines-imp2000').style.display = 'none';
+    document.getElementById('machines-imp3000').style.display = 'none';
+    document.getElementById('machines-herc60').style.display = 'none';
+    document.getElementById('machines-herc40').style.display = 'none';
+
+    document.getElementById('imp2000').style.display = 'none';
+    document.getElementById('imp3000').style.display = 'none';
+    document.getElementById('herc60').style.display = 'none';
+    document.getElementById('herc40').style.display = 'none';
+  }
+
   function clear() {
     document.getElementById('imp2000').style.display = 'none';
     document.getElementById('imp3000').style.display = 'none';
@@ -85,8 +101,20 @@
     document.getElementById('herc40').style.display = 'none';
   };
 
-  function changeData(parameter) {
-    clear()
+  function changeCategory(parameter) {
+    clearCategory();
+
+    if(parameter == 0) {
+      document.getElementById('machines-imp2000').style.display = 'flex';
+      document.getElementById('machines-imp3000').style.display = 'flex';
+    } else {
+      document.getElementById('machines-herc60').style.display = 'flex';
+      document.getElementById('machines-herc40').style.display = 'flex';
+    };
+  }
+
+  function changeMachine(parameter) {
+    clear();
 
     if(parameter == 0){
       document.getElementById('imp2000').style.display = 'flex';
