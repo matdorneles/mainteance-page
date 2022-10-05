@@ -1,0 +1,145 @@
+:root {
+  --color-primary: #ff5a14;
+  --color-secondary: #0f9f0a;
+  --color-text-white: #ffffff;
+  --color-text-dark: #4c4c4c;
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.header-container {
+  background-color: var(--color-primary);
+  max-width: 144rem;
+}
+
+.header-design {
+  align-items: center;
+  color: var(--color-text-white);
+  display: flex;
+  font-size: 2.1rem;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: fit-content;
+}
+
+.header-icon {
+  color: var(--color-secondary);
+  margin-right: 0.5rem;
+}
+
+.banner {
+  background-color: var(--color-secondary);
+  max-width: 144rem;
+}
+
+.banner-img {
+  height: 55rem;
+  object-fit: cover;
+  padding: 1.2rem;
+  width: 100%;
+}
+
+.container-choice {
+  align-items: center;
+  background-color: var(--color-secondary);
+  color: var(--color-text-white);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  max-height: fit-content;
+}
+
+.choice-icon {
+  color: var(--color-primary);
+  margin-right: 0.5rem;
+}
+
+.select-box {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.machines {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem;
+  margin-top: 2rem;
+}
+
+.machines h4 button {
+  background-color: var(--color-secondary);
+  border-style: solid;
+  border-color: var(--color-text-white);
+  color: var(--color-text-white);
+  cursor: pointer;
+  font-size: 2.2rem;
+  padding: 1rem;
+}
+
+.machines h4 button:hover {
+  background-color: var(--color-primary);
+  transition: .3s;
+}
+
+.machines h4 button:active {
+  background-color: yellow;
+  font-size: larger;
+}
+
+.info {
+  background-color: var(--color-secondary);
+  color: blue;
+  padding-bottom: 3rem;
+}
+
+#imp2000, #imp3000, #herc60, #herc40 {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer {
+  align-items: center;
+  background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  justify-content: center;
+  text-decoration: none;
+  max-height: fit-content;
+}
+
+.footer-icon_icons {
+  color: var(--color-text-white);
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+.footer-text {
+  color: var(--color-text-dark);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}

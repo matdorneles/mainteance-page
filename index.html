@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="./static/style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+
+  <title>Revisão Programada Stara</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-design">
+        <h1>
+          <i class="fa-solid fa-screwdriver-wrench header-icon"></i>
+          <span></i>e-Manutenção</span>
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="banner">
+    <img class="banner-img" src="./imgs/banner.png">
+  </div>
+
+  <div class="container-choice">
+    <div class="select-box">
+      <h3><span><i class="fa-solid fa-gear choice-icon"></i>SELECIONAR MÁQUINA</span></h3>
+      <div class="machines">
+        <h4>
+          <button onclick="changeData(0)">Imperador 2000</button>
+          <button onclick="changeData(1)">Imperador 3000/4000</button>
+          <button onclick="changeData(2)">Hércules 6.0</button>
+          <button onclick="changeData(3)">Hércules 4.0</button>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    <div id="imp2000">
+      <h5>{ Abrir tabela de revisões Imperador 2000 }</h5>
+    </div>
+    <div id="imp3000">
+      <h5>{ Abrir tabela de revisões Imperador 3000/4000 }</h5>
+    </div>
+    <div id="herc60">
+      <h5>{ Abrir tabela de revisões Hércules 6.0 }</h5>
+    </div>
+    <div id="herc40">
+      <h5>{ Abrir tabela de revisões Hércules 4.0 }</h5>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-icon">
+        <a href="https://www.linkedin.com/in/matheus-dorneles-82633716b/" target="_blank">
+          <i class="fa-brands fa-linkedin footer-icon_icons"></i>
+        </a>
+        <a href="https://github.com/matdorneles" target="_blank">
+          <i class="fa-brands fa-github footer-icon_icons"></i>
+        </a>
+      </div>
+      <h4 class="footer-text">
+        <span>Desenvolvido por Matheus Dorneles</span>
+      </h4>
+    </div>
+  </footer>
+</body>
+
+<script>
+  function clear() {
+    document.getElementById('imp2000').style.display = 'none';
+    document.getElementById('imp3000').style.display = 'none';
+    document.getElementById('herc60').style.display = 'none';
+    document.getElementById('herc40').style.display = 'none';
+  };
+
+  function changeData(parameter) {
+    clear()
+
+    if(parameter == 0){
+      document.getElementById('imp2000').style.display = 'flex';
+    } else if(parameter == 1) {
+      document.getElementById('imp3000').style.display = 'flex';
+    } else if(parameter == 2) {
+      document.getElementById('herc60').style.display = 'flex';
+    } else {
+      document.getElementById('herc40').style.display = 'flex';
+    }
+  }
+</script>
+</html>
